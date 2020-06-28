@@ -38,7 +38,7 @@ public class LoginActivity extends AppCompatActivity {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
-        dbIni();
+        //dbIni();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         loginViewModel = ViewModelProviders.of(this, new LoginViewModelFactory())
@@ -143,7 +143,7 @@ public class LoginActivity extends AppCompatActivity {
     private void dbIni(){
         PeopleHandler peopleHandler = new PeopleHandler( this );
         PhotoHandler photoHandler = new PhotoHandler(this);
-        peopleHandler.create( new LoggedInUser( 0, "user1@gmail.com", "123456" ) );
+        peopleHandler.create( new LoggedInUser( 1, "user1@gmail.com", "123456" ) );
         photoHandler.create(new Photo(0, "photo1", "https://lh3.googleusercontent.com/proxy/G7iyt-QEhXrtwyRdKiRqxpP5HYMGhG2XT9sz4U8ByBhM-KunNwmwLNEc6u_XH10FSuut8W-HahW7-0y_MyfSF1YZNDXELQ", 1));
         photoHandler.create(new Photo(0, "photo2", "https://bipbap.ru/wp-content/uploads/2019/07/11-5-1-640x853.jpg", 1));
         photoHandler.create(new Photo(0, "photo3", "https://avatars.mds.yandex.net/get-zen_doc/1549204/pub_5cb076f20c706d00b3467e27_5cb0770ca4ee5b00b3d138a8/scale_1200", 2));
