@@ -1,9 +1,26 @@
 package com.home.logintest.data.model;
 
 public class Photo {
+
+    private int id;
+    private String photoName;
     private String photoPath;
     private int authorId;
-    private String description;
+
+    public Photo(int id, String photoName, String photoPath, int authorId) {
+        this.id = id;
+        this.photoName = photoName;
+        this.photoPath = photoPath;
+        this.authorId = authorId;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public String getPhotoPath() {
         return photoPath;
@@ -21,11 +38,11 @@ public class Photo {
         this.authorId = authorId;
     }
 
-    public String getDescription() {
-        return description;
+    public String getPhotoName() {
+        return photoName;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setPhotoName(String photoName) {
+        this.photoName = photoName;
     }
 }
